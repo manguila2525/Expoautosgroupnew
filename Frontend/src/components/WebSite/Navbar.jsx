@@ -11,10 +11,10 @@ export default function Navbar() {
   return (
     <Fragment>
       <BrowserRouter>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
           <div class="container">
             <Link class="navbar-brand text-uppercase" to="/home">Expo<span class="text-danger">Autos</span>Group</Link>
-            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#my-nav" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div id="my-nav" class="collapse navbar-collapse">

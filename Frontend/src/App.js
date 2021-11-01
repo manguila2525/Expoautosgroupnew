@@ -17,7 +17,7 @@ const App = () => {
   return (
     <Fragment>
       <Router>
-        <Route path="/home">
+        <Route path="/home" exact>
           <Navbar />
           <Footer />
         </Route>

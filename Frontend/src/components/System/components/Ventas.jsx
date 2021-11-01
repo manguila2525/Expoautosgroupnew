@@ -119,9 +119,8 @@ const Ventas = () => {
             <input type="hidden" name="send" value={true} />
             <select className="form-select" id="promotor" name="promotor" onClick={handleInput}>
               {
-                promotores.map(promo => (
-                  <option value={promo._id} >P-{promo._id.substr(20)}</option>
-                ))
+                promotores.map(promo => promo.approved ? <option value={promo._id} >P-{promo._id.substr(20)}</option> : null
+                )
               }
             </select>
           </div> : null}
