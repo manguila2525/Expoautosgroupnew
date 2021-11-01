@@ -71,7 +71,8 @@ const AutosSchema = new Schema({
   });
 
 AutosSchema.method.setImgUrl = function setImgUrl(filename) {
-  this.imgUrl = `http://localhost:5000/public/${filename}`
+  this.imgUrl = `public/${filename}`
+  // this.imgUrl = `http://localhost:5000/public/${filename}`
 }
 
 module.exports = mongoose.model('Autos', AutosSchema)
