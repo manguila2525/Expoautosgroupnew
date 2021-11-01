@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const URI = 'mongodb://localhost/expoautosgroup'
+const URI = "mongodb+srv://anguila2525:anguila2525@cluster0.mlj19.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 
 mongoose.connect(URI)
