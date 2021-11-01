@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
-const URI = "mongodb+srv://anguila2525:anguila2525@cluster0.mlj19.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-
+const URI = process.env.MONGODB_URI
 
 mongoose.connect(URI)
   .then(db => console.log('Db is connected'))
