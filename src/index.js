@@ -3,6 +3,7 @@ if(process.env.NODE_ENV !== 'production'){
   require('dotenv').config();
 }
 const express = require('express')
+const router = express.Router();
 const cors = require('cors');
 const morgan = require('morgan')
 const app = express()
@@ -33,6 +34,9 @@ app.use(cors());
 // app.use('/public', express.static(`${__dirname}/storage/imgs`))
 
 //ROUTES
+app.use('/', router.get('/', (req,res) =>{
+  res.send("hello")
+}))
 app.use('/api/autos', require('./routes/autos.routes'))
 app.use('/api/promotores', require('./routes/promotores.routes'))
 app.use('/api/history', require('./routes/history.routes'))
