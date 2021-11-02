@@ -34,9 +34,9 @@ app.use(cors());
 // app.use('/public', express.static(`${__dirname}/storage/imgs`))
 
 //ROUTES
-// app.use('/', router.get('/', (req,res) =>{
-//   res.send("hello")
-// }))
+app.use('/', router.get('/', (req,res) =>{
+  res.send("hello")
+}))
 app.use('/api/autos', require('./routes/autos.routes'))
 app.use('/api/promotores', require('./routes/promotores.routes'))
 app.use('/api/history', require('./routes/history.routes'))
