@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <Fragment>
       <BrowserRouter>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
           <div class="container">
             <Link class="navbar-brand text-uppercase" to="/home">Expo<span class="text-danger">Autos</span>Group</Link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#my-nav" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,9 +19,9 @@ export default function Navbar() {
             </button>
             <div id="my-nav" class="collapse navbar-collapse">
               <ul class="navbar-nav text-center mr-auto">
-                <li class="nav-item active">
+                {/* <li class="nav-item active">
                   <a class="nav-link" href="#">Quienes somos</a>
-                </li>
+                </li> */}
                 <li class="nav-item active">
                   <Link class="nav-link " to="/home/catalogo">Catalogo</Link>
                 </li>
