@@ -18,8 +18,8 @@ console.log(path.join(__dirname, '../Frontend/src/assets/img'))
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))
 const storage = multer.diskStorage({
-  destination: path.join(__dirname, '../Frontend/public/img'),
-  // destination: path.join(__dirname, 'public/img/uploads'),
+  // destination: path.join(__dirname, '../Frontend/public/img'),
+  destination: path.join(__dirname, 'public/uploads'),
   filename: (req, file, cb, filename) => {
     cb(null, Date.now() + path.extname(file.originalname))
   }
@@ -35,7 +35,7 @@ app.use(cors());
 
 //ROUTES
 app.use('/', router.get('/', (req,res) =>{
-  res.send("hello")
+  res.json({status: "good"})
 }))
 app.use('/api/autos', require('./routes/autos.routes'))
 app.use('/api/promotores', require('./routes/promotores.routes'))
